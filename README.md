@@ -1,5 +1,6 @@
 Node Starter 
 =======================
+[![Build Status](https://travis-ci.org/alvinio/node-starter)](https://travis-ci.org/alvinio/node-starter#)
 
 A boilerplate starter template for **Node.js** web applications.
 
