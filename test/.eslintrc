@@ -1,0 +1,15 @@
+{
+  "env": {
+    "mocha": true
+  },
+  "rules": {
+    "node/no-unpublished-require": 0,
+    "node/no-missing-require": 0,
+    "no-unused-vars": [
+      "error",
+      {
+        "varsIgnorePattern": "should|expect"
+      }
+    ]
+  }
+}

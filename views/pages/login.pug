@@ -1,0 +1,40 @@
+extends ../layout
+
+block append scripts
+  script(src="/js/auth.js")
+  script(src="/js/validation.js")
+
+block content
+  .container.py-5
+    .row
+      .col-md-12
+        h2.text-center.mb-4= `Welcome back to ${helpers.siteName}`
+        .row
+          .col-md-6.mx-auto
+            .card.rounded-0
+              .card-header
+                h3.mb-0 Login
+              .card-body
+                form#authForm.form(role="form" autocomplete="off" novalidate="" method="POST")
+                  .form-group
+                    label(for="email") Email
+                    input#email.form-control.form-control-lg.rounded-0(type="email" name="email" required="")
+                    .invalid-feedback Please enter a valid email.
+                  .form-group
+                    label Password
+                    .input-group
+                      input#password.form-control.form-control-lg.rounded-0(type="password" name="password" required="")
+                      .input-group-append.password-toggle
+                        span.input-group-text Show
+                      .invalid-feedback Please enter a password.
+                  .form-group
+                    .checkbox.checkbox-success
+                      input#checkbox3(type="checkbox" name="remember" checked="")
+                      label(for="checkbox3")
+                          | Remember Me
+                  .form-group.no-margin
+                    button#btnForm.btn.btn-primary.btn-block.btn-lg.btn-primary(type="submit")
+                      | Login
+                  .margin-top20.text-center
+                    |  Don"t have an account?
+                    a(href="/profile")  Create One

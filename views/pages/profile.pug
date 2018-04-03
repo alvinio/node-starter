@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+  .col-lg-12
+    section
+      .content-body
+        .row
+          .col-md-3.col-sm-4.col-12
+            img.img-responsive(src='https://www.gravatar.com/avatar/00000000000000000000000000000000'  width="250px" height="250px")
+            h3
+              a(href='#') #{user.email}
+              span
+            p No follower yet :(
+            p.text-center
+              | Dedicated my life Node!
+              .btn.btn-lg.btn-primary.btn-block Follow
+          .col-md-9.col-sm-8.col-12
+            div
+              h4 Biography:
+              p
+                | I love node..no really!
